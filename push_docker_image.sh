@@ -1,0 +1,1 @@
+sudo docker push danieletouk3/codix-assignment:`docker images | awk '{print $2}' | head -2 | tail -1 |bc ($tag + 1)`
