@@ -4,7 +4,7 @@ echo `aws secretsmanager get-secret-value --region us-east-1 --secret-id docker_
 
 old_tag=`docker images | awk '{print $2}' | head -2| tail -1`
 
-new_tag=($new_tag +1)
+new_tag=($old_tag +1)
 
 docker build -t danieletouk3/codix-assignment:$new_tag .
 
