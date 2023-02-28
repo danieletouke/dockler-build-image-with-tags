@@ -10,7 +10,7 @@
 echo "old version docker images"
 docker images
 
-docker push $image_name:$version
+docker push $repo_name/$image_name:$version
 
 docker rmi $image_name:$num -f
 
