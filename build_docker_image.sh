@@ -4,7 +4,7 @@ echo `aws secretsmanager get-secret-value --region us-east-1 --secret-id docker_
 
 repo_name=danieletouk3
 image_name=app
-num=`docker images | sort -r | awk '{print $2}' | head -1`
+num=`docker images | awk '{print $2}' | head -2 | tail -1`
 version=$(echo $num + 1 | bc -l)
 
 docker build -t $repo_name/$image_name:$version .
